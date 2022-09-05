@@ -1,7 +1,7 @@
 from registro import *
 import math
 
-##Actualizado 5/9 01:14
+##Actualizado 5/9 14:08
 def mostrar_menu():
     menu = """ 
      ============================================================================= 
@@ -38,7 +38,6 @@ def convert_lan(num):
     languages = ("0", "Python", "Java", "C++", "Javascript", "Shell", "HTML", "Ruby", "Swift", "C#", "VB", "Go")
     return languages[num]
 
-
 def display_tabla():
     cad = "{:<20}{:<20}{:<10}{:<10}{:^10}".format("Número de Proyecto", "Titulo", "Fecha", "Lenguaje",
                                                   "Cantidad de Líneas de Código")
@@ -47,7 +46,7 @@ def display_tabla():
 
 # Funcion: Se pasa como parametro el vector creado e imprime sus respectivos componentes en el orden asignado anteriormente en los titulos de la tabla a mostrar.
 def display_one(vec):
-    cad = "{:<20}{:<20}{:<10}{:<10}{:^10}".format(vec.numero_projecto, vec.titulo, vec.fecha, vec.lenguaje,
+    cad = "{:<20}{:<20}{:<10}{:<10}{:^10}".format(vec.numero_projecto, vec.titulo, vec.fecha, convert_lan(vec.lenguaje),
                                                   vec.cantidad)
     return cad
 
@@ -76,7 +75,7 @@ def principal():
                 print("\t\t\t\t\t\t\t\t\t Lista de Projectos: \n")
                 print(display_tabla())
                 for i in range(len(projectos)):
-                    print(display_one(projectos[i]))
+                    print(display_one(projectos[i]) + "\n")
             else:
                 print("\t\t\t\t\t\t\t Aun no se cargaron proyectos \n")
 
