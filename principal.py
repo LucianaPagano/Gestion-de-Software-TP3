@@ -84,7 +84,8 @@ def principal():
             i4 = opcion4(projectos)
 
         elif op == 5:
-            print('\t OPCION 5 RESUMEN POR AÑO: ')
+            print('\t\t\t\t\t\t\t\tLa Opcion que eligio es la 4.')
+            print('\t RESUMEN POR AÑO: ')
             acumulador = opcion5(projectos)
 
         elif op == 6:
@@ -100,7 +101,7 @@ def principal():
                 for i in range(len(item6)):
                     print(display_one(item6[i]))
         elif op == 7:
-            determinar_mayor(acumulador)
+            opcion7(acumulador)
 
         elif op == 8:
             print('\t\t\t\t\t\t\t\t\tNos vemos pronto!')
@@ -125,10 +126,6 @@ def opcion4(vec):
             a = sum(can)
     sp = print("\t\t\t\t\t\tLa cantidad de lineas de código de " + str(convert_lan(sel)) + " es de: ", a)
 
-
-# 5) Resumen por año: Calcular la cantidad de proyectos por año de actualización,
-# considerando los años entre 2000 y 2022 incluidos ambos.
-# Mostrar los resultados solo de los años que tengan algún proyecto de software.
 def opcion5(vec):
     fech = [2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022]
     acumulador = 23 * [0]
@@ -161,10 +158,7 @@ def opcion6(vec):
                 langi[i], langi[j] = langi[j], langi[i]
     return langi
 
-
-# 7) Productividad: A partir del resultado obtenido en el punto 5, determinar el año con mayor cantidad de proyectos actualizados,
-# considerando mostrar todos los años si fuera más de uno con dicha cantidad.
-def determinar_mayor(vec):
+def opcion7(vec):
     fecha = (2000, 2001, 2002, 2003, 2004, 2005, 2006, 2007, 2008, 2009, 2010, 2011, 2012, 2013, 2014, 2015, 2016, 2017, 2018, 2019, 2020, 2021, 2022)
     may = 0
     for i in range(len(vec)):
