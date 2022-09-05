@@ -1,6 +1,6 @@
 import random
 
-
+# Actualizacion 5/9 01:15
 class Registro:
     def __init__(self, num_proj, titulo, fecha, leng, cant):
         self.numero_projecto = num_proj
@@ -20,7 +20,7 @@ def validar_mayor_que(num, lim):
 def crearArreglo(tabla):
     n = int(input("Ingrese la cantidad de componentes del arreglo(mayor que 0): "))
     n = validar_mayor_que(n, 0)
-    vec = n * [tabla]
+    vec = n * tabla
     return vec
 
 # Funcion: Se le pasa como parametro la cantidad de componenetes ingresados y se
